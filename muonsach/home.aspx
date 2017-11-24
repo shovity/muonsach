@@ -1,16 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="home.aspx.cs" Inherits="muonsach.home" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterLayouts/layout.Master" AutoEventWireup="true" CodeBehind="home.aspx.cs" Inherits="muonsach.WebForm1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <title>Trang Chủ</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="contentPlaceHolder" runat="server">
+    home
+    <a href="bookDetail.aspx">bookDetail.aspx</a>
+    <a href="login.aspx">login.aspx</a>
+    <a href="register.aspx">register.aspx</a>
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    df
-    </div>
-    </form>
-</body>
-</html>
+</asp:Content>

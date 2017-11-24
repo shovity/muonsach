@@ -1,0 +1,29 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="account.master.cs" Inherits="muonsach.account" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Tài khoản</title>
+    <link href="../statics/css/account.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div id="lheader"></div>
+        <div id="lfooter"></div>
+
+        <div id="lcontent">
+            <asp:ContentPlaceHolder ID="contentPlaceHolder" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+
+       
+        
+    </div>
+    </form>
+</body>
+</html>

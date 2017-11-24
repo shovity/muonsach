@@ -1,0 +1,7 @@
+P:\muonsach\BLL\bin\Debug\BLL.dll
+P:\muonsach\BLL\bin\Debug\BLL.pdb
+P:\muonsach\BLL\bin\Debug\DAL.dll
+P:\muonsach\BLL\bin\Debug\DAL.pdb
+P:\muonsach\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+P:\muonsach\BLL\obj\Debug\BLL.dll
+P:\muonsach\BLL\obj\Debug\BLL.pdb

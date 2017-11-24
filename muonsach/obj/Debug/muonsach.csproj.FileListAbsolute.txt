@@ -3,3 +3,7 @@ P:\muonsach\muonsach\bin\muonsach.pdb
 P:\muonsach\muonsach\obj\Debug\muonsach.csprojResolveAssemblyReference.cache
 P:\muonsach\muonsach\obj\Debug\muonsach.dll
 P:\muonsach\muonsach\obj\Debug\muonsach.pdb
+P:\muonsach\muonsach\bin\BLL.dll
+P:\muonsach\muonsach\bin\DAL.dll
+P:\muonsach\muonsach\bin\BLL.pdb
+P:\muonsach\muonsach\bin\DAL.pdb

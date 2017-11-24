@@ -1,0 +1,4 @@
+P:\muonsach\DAL\bin\Debug\DAL.dll
+P:\muonsach\DAL\bin\Debug\DAL.pdb
+P:\muonsach\DAL\obj\Debug\DAL.dll
+P:\muonsach\DAL\obj\Debug\DAL.pdb

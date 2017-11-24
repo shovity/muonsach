@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="layout.master.cs" Inherits="muonsach.layout" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Mượn sách</title>
+    <link href="../statics/css/app.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+
+
+        <div id="header">
+            header
+        </div>
+
+
+        <div id="navBar">
+            navigation bar
+        </div>
+
+        <div id="asideBar">
+            asideBar
+        </div>
+
+
+        <div id="content">
+            <asp:ContentPlaceHolder ID="contentPlaceHolder" runat="server">
+                content
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <div id="footer">
+            footer
+        </div>
+
+        <div id="floatMenu">floatMenu</div>
+    </div>
+    </form>
+    <script src="../statics/js/app.js"></script>
+</body>
+</html>
