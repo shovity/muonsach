@@ -5,3 +5,10 @@ P:\muonsach\BLL\bin\Debug\DAL.pdb
 P:\muonsach\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 P:\muonsach\BLL\obj\Debug\BLL.dll
 P:\muonsach\BLL\obj\Debug\BLL.pdb
+D:\proj\muonsach\muonsach\BLL\bin\Debug\BLL.dll
+D:\proj\muonsach\muonsach\BLL\bin\Debug\BLL.pdb
+D:\proj\muonsach\muonsach\BLL\bin\Debug\DAL.dll
+D:\proj\muonsach\muonsach\BLL\bin\Debug\DAL.pdb
+D:\proj\muonsach\muonsach\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\proj\muonsach\muonsach\BLL\obj\Debug\BLL.dll
+D:\proj\muonsach\muonsach\BLL\obj\Debug\BLL.pdb
