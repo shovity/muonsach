@@ -10,7 +10,7 @@ namespace DAL
             return new SqlConnection("Data Source =.\\SQLEXPRESS; Initial Catalog = muonsach; Integrated Security = True");
         }
 
-        private DataTable getDataTable (string command)
+        public DataTable getDataTable (string command)
         {
             SqlConnection connection = getSqlConnection();
             connection.Open();
@@ -22,7 +22,7 @@ namespace DAL
             return dataTable;
         }
 
-        private void excuseNonQuery (string command)
+        public void excuseNonQuery (string command)
         {
             SqlConnection connection = getSqlConnection();
             connection.Open();
