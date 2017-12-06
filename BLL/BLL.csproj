@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BinhLuan.cs" />
+    <Compile Include="BusinssLogic.cs" />
     <Compile Include="MuonNhieu.cs" />
     <Compile Include="MuonSach.cs" />
     <Compile Include="NguoiDung.cs" />

@@ -15,8 +15,7 @@ namespace BLL
             int hientai)
         {
             string command = "update TruyCap set 'tong' = " + tong + ", 'ngay' = " + ngay + 
-                ", 'thang' = " + thang + ", 'nam' = " + nam + ", 'hien_tai' = " + hientai + 
-                " where 'trang' = " + trang;
+                ", 'thang' = " + thang + ", 'nam' = " + nam + ", 'hien_tai' = " + hientai;
             data.excuseNonQuery(command);
         }
     }
