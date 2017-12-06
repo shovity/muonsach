@@ -8,5 +8,33 @@ namespace BLL
 {
     class NXB
     {
+        private string maNxb;
+        private string tenNxb;
+
+        public string MaNxb
+        {
+            get
+            {
+                return maNxb;
+            }
+
+            set
+            {
+                maNxb = value;
+            }
+        }
+
+        public string TenNxb
+        {
+            get
+            {
+                return tenNxb;
+            }
+
+            set
+            {
+                tenNxb = value;
+            }
+        }
     }
 }
