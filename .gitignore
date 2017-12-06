@@ -1,2 +1,3 @@
 *.cache
-*/debug
+*/obj
+*/bin
