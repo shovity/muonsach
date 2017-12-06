@@ -12,10 +12,10 @@ namespace BLL
         private Data data = new Data();
 
         public void updateTruyCap(string trang, int tong, int ngay, int tuan, int thang, int nam, 
-            int hientai)
+            string ngaythangnam)
         {
-            string command = "update TruyCap set 'tong' = " + tong + ", 'ngay' = " + ngay + 
-                ", 'thang' = " + thang + ", 'nam' = " + nam + ", 'hien_tai' = " + hientai;
+            string command = "update truy_cap set tong = " + tong + ", ngay = " + ngay + 
+                ", thang = " + thang + ", nam = " + nam + ", ngay_thang_nam = '" + ngaythangnam + "'";
             data.excuseNonQuery(command);
         }
     }

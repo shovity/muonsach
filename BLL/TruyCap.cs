@@ -3,108 +3,40 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAL;
+using System.Data;
 
 namespace BLL
 {
-    class TruyCap
+    public class TruyCap
     {
-        private string trang;
-        private int tong;
-        private int ngay;
-        private int tuan;
-        private int thang;
-        private int nam;
-        private int hienTai;
+        Data data = new Data();
+        DataTable dataTable = new DataTable();
 
-        public string Trang
+        public int truyCapNgay()
         {
-            get
-            {
-                return trang;
-            }
+            string command = "select * from truy_cap";
+            dataTable = data.getDataTable(command);
 
-            set
-            {
-                trang = value;
-            }
+            return Int32.Parse(dataTable.Rows[0][2].ToString());
         }
 
-        public int Tong
+        public int truyCapThang()
         {
-            get
-            {
-                return tong;
-            }
-
-            set
-            {
-                tong = value;
-            }
+            dataTable = data.getDataTable("select * from truy_cap");
+            return Int32.Parse(dataTable.Rows[0][3].ToString());
         }
 
-        public int Ngay
+        public int truyCapNam()
         {
-            get
-            {
-                return ngay;
-            }
-
-            set
-            {
-                ngay = value;
-            }
+            dataTable = data.getDataTable("select * from truy_cap");
+            return Int32.Parse(dataTable.Rows[0][4].ToString());
         }
 
-        public int Tuan
+        public int truyCapTong()
         {
-            get
-            {
-                return tuan;
-            }
-
-            set
-            {
-                tuan = value;
-            }
-        }
-
-        public int Thang
-        {
-            get
-            {
-                return thang;
-            }
-
-            set
-            {
-                thang = value;
-            }
-        }
-
-        public int Nam
-        {
-            get
-            {
-                return nam;
-            }
-
-            set
-            {
-                nam = value;
-            }
-        }
-
-        public int HienTai
-        {
-            get
-            {
-                return hienTai;
-            }
-
-            set
-            {
-                hienTai = value;
-            }
+            dataTable = data.getDataTable("select * from truy_cap");
+            return Int32.Parse(dataTable.Rows[0][1].ToString());
         }
     }
 }
