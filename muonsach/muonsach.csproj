@@ -57,9 +57,37 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="favicon.ico" />
     <Content Include="statics\css\account.css" />
+    <Content Include="statics\css\ajax-loader.gif" />
     <Content Include="statics\css\app.css" />
+    <Content Include="statics\css\fonts\slick.svg" />
+    <Content Include="statics\css\home.css" />
+    <Content Include="statics\css\slick-theme.css" />
+    <Content Include="statics\css\slick.css" />
+    <Content Include="statics\img\covers\3.u5465.d20171009.t095206.104725.jpg" />
+    <Content Include="statics\img\covers\anhaydakhongnamtaytoi.u5430.d20171024.t100211.346199_2.jpg" />
+    <Content Include="statics\img\covers\bia-1-minh-la-ca.u5505.d20170803.t083606.108681.jpg" />
+    <Content Include="statics\img\covers\bia_loi-song-toi-gian-cua-nguoi-nhat.u2751.d20170222.t225522.277804.jpg" />
+    <Content Include="statics\img\covers\cam-nang-tu-hoc-ielts--cover-.u3059.d20170613.t094633.695747.jpg" />
+    <Content Include="statics\img\covers\chien-thang-con-quy-trong-ban.jpg" />
+    <Content Include="statics\img\covers\ditimlesong20161.u84.d20161125.t134037.152104.jpg" />
+    <Content Include="statics\img\covers\docvi.u3059.d20170716.t121650.343912.jpg" />
+    <Content Include="statics\img\covers\hinh-6.u4939.d20171009.t095448.393699.jpg" />
+    <Content Include="statics\img\covers\img117.u3059.d20170616.t100547.729023.jpg" />
+    <Content Include="statics\img\covers\img592.u3059.d20170616.t101749.921069.jpg" />
+    <Content Include="statics\img\covers\img976.u335.d20161212.t123014.937796.jpg" />
+    <Content Include="statics\img\covers\img_308.u3059.d20170616.t101629.942213.jpg" />
+    <Content Include="statics\img\covers\kheo-an-noi-se-co-duoc-thien-ha.jpg" />
+    <Content Include="statics\img\covers\khi-hoi-tho-hoa-thinh-khong.u5464.d20170726.t170655.288851.jpg" />
+    <Content Include="statics\img\covers\photo_2017-09-29_14-07-40.u5567.d20170929.t140824.120862.jpg" />
+    <Content Include="statics\img\covers\tuoi-tre-dang-gia-bao-nhieu-u547-d20161012-t113832-888179.u3059.d20170616.t095744.390222.jpg" />
+    <Content Include="statics\img\logo.png" />
     <Content Include="statics\js\app.js" />
+    <Content Include="statics\js\jquery.js" />
+    <Content Include="statics\js\slick.js" />
+    <Content Include="userControls\logo.ascx" />
+    <Content Include="userControls\navigationBar.ascx" />
     <Content Include="Web.config" />
     <Content Include="login.aspx" />
     <Content Include="register.aspx" />
@@ -110,10 +138,28 @@
     <Compile Include="bookDetail.aspx.designer.cs">
       <DependentUpon>bookDetail.aspx</DependentUpon>
     </Compile>
+    <Compile Include="userControls\logo.ascx.cs">
+      <DependentUpon>logo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userControls\logo.ascx.designer.cs">
+      <DependentUpon>logo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="userControls\navigationBar.ascx.cs">
+      <DependentUpon>navigationBar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userControls\navigationBar.ascx.designer.cs">
+      <DependentUpon>navigationBar.ascx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="masterLayouts\layout.Master" />
     <Content Include="masterLayouts\account.Master" />
+    <Content Include="statics\css\fonts\slick.eot" />
+    <Content Include="statics\css\fonts\slick.ttf" />
+    <Content Include="statics\css\fonts\slick.woff" />
+    <Content Include="statics\css\fonts\Roboto-Regular.ttf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -121,10 +167,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="statics\img\" />
-    <Folder Include="userControls\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{89a23b1a-2be3-4862-a27c-e4fa3335ae75}</Project>

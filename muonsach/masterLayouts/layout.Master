@@ -1,26 +1,42 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="layout.master.cs" Inherits="muonsach.layout" %>
 
+<%@ Register Src="~/userControls/logo.ascx" TagPrefix="uc1" TagName="logo" %>
+<%@ Register Src="~/userControls/navigationBar.ascx" TagPrefix="uc1" TagName="navigationBar" %>
+
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Mượn sách</title>
+
+    <%--import css--%>
     <link href="../statics/css/app.css" rel="stylesheet" />
+    <link href="../statics/css/slick.css" rel="stylesheet" />
+    <link href="../statics/css/slick-theme.css" rel="stylesheet" />
+    
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
+
+    <%--import js--%>
+    <script src="../statics/js/jquery.js"></script>
+    <script src="../statics/js/slick.js"></script>
+    <script src="../statics/js/app.js"></script>
+    
     <form id="form1" runat="server">
     <div>
 
 
         <div id="header">
-            header
+            <uc1:logo runat="server" ID="logo" />
         </div>
 
 
         <div id="navBar">
-            navigation bar
+            <uc1:navigationBar runat="server" id="navigationBar" />
         </div>
 
         <div id="asideBar">
@@ -41,6 +57,6 @@
         <div id="floatMenu">floatMenu</div>
     </div>
     </form>
-    <script src="../statics/js/app.js"></script>
+
 </body>
 </html>

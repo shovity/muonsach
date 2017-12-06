@@ -3,14 +3,27 @@
     outline: none;
 }
 
+@font-face {
+    font-family: roboto;
+    src: url(/statics/css/fonts/Roboto-Regular.ttf);
+}
+
+.logo-text {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 24px;
+    padding: 125px 0 0 60px;
+}
+
 body {
     margin: 0;
-    font-family: sans-serif, arial;
+    font-family: roboto, sans-serif, arial;
     overflow-x: hidden;
+    color: #333;
 }
 
 #header {
-    background: red;
+    background: url(/statics/img/cover.jpg) no-repeat top;
+    background-size: 100% auto;
     width: 100%;
     height: 200px;
 }
@@ -25,11 +38,10 @@ body {
     height: 1000px;
     width: calc(100vw - 250px);
     margin-left: 250px;
-    background: green;
 }
 
 #navBar {
-    background: gray;
+    background: #E91E63;
     width: 100%;
     height: 50px;
 }
@@ -49,6 +61,7 @@ body {
 }
 
 #floatMenu {
+    display: none;
     background: yellow;
     position: fixed;
     right: 0;
