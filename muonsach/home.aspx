@@ -1,7 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterLayouts/layout.Master" AutoEventWireup="true" CodeBehind="home.aspx.cs" Inherits="muonsach.WebForm1" %>
+
+<%@ Register Src="~/userControls/bookItem.ascx" TagPrefix="uc1" TagName="bookItem" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Trang Chủ</title>
-    <link href="statics/css/home.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="contentPlaceHolder" runat="server">
 
@@ -10,10 +12,7 @@
     <div class="list-item">
         <asp:ListView ID="ListViewNews" runat="server">
             <ItemTemplate>
-                <div class="item">
-                    <img src="/statics/img/covers/<%# Eval("anh") %>" />
-                    <div class="index"><%# Eval("ma_sach") %></div>
-                </div>
+                <uc1:bookItem runat="server" id="bookItem" />
             </ItemTemplate>
         </asp:ListView>
     </div>
@@ -22,10 +21,7 @@
     <div class="list-item">
         <asp:ListView ID="ListViewHot" runat="server">
             <ItemTemplate>
-                <div class="item">
-                    <img src="/statics/img/covers/<%# Eval("anh") %>" />
-                    <div class="index"><%# Eval("ma_sach") %></div>
-                </div>
+                <uc1:bookItem runat="server" id="bookItem" />
             </ItemTemplate>
         </asp:ListView>
     </div>

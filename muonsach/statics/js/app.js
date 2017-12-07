@@ -1,4 +1,7 @@
 ﻿$(document).ready(function () {
+    var wH = document.documentElement.clientHeight;
+    var bH = document.body.clientHeight;
+
     $('.list-item').slick({
         dots: true,
         infinite: false,
@@ -7,12 +10,23 @@
     });
 
 
-    // stich asideBar
-    window.addEventListener('scroll', function (event) {
-        if (document.documentElement.scrollTop > 250) {
-            asideBar.className = 'stick'
+    
+    window.addEventListener('scroll', function (event) {      
+        var sct = document.documentElement.scrollTop;
+        // stich asideBar
+        if (sct > bH - wH - 100) {
+            asideBar.className = 'stick-bot'
+        } else if (sct > 300) {
+            asideBar.className = 'stick'  
         } else {
             asideBar.className = ''
+        }
+
+        // stick navbar
+        if (sct > 250) {
+            navBar.className = 'fixed'
+        } else {
+            navBar.className = ''
         }
     })
 });

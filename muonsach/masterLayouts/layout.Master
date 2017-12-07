@@ -2,6 +2,10 @@
 
 <%@ Register Src="~/userControls/logo.ascx" TagPrefix="uc1" TagName="logo" %>
 <%@ Register Src="~/userControls/navigationBar.ascx" TagPrefix="uc1" TagName="navigationBar" %>
+<%@ Register Src="~/userControls/footer.ascx" TagPrefix="uc1" TagName="footer" %>
+<%@ Register Src="~/userControls/asideBar.ascx" TagPrefix="uc1" TagName="asideBar" %>
+
+
 
 
 <!DOCTYPE html>
@@ -11,9 +15,9 @@
     <title>Mượn sách</title>
 
     <%--import css--%>
-    <link href="../statics/css/app.css" rel="stylesheet" />
     <link href="../statics/css/slick.css" rel="stylesheet" />
     <link href="../statics/css/slick-theme.css" rel="stylesheet" />
+    <link href="../statics/css/app.css" rel="stylesheet" />
     
 
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -40,7 +44,7 @@
         </div>
 
         <div id="asideBar">
-            asideBar
+            <uc1:asideBar runat="server" id="asideBar1" />
         </div>
 
 
@@ -51,7 +55,7 @@
         </div>
 
         <div id="footer">
-            footer
+            <uc1:footer runat="server" id="footer1" />
         </div>
 
         <div id="floatMenu">floatMenu</div>

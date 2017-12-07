@@ -49,6 +49,15 @@ namespace muonsach {
         protected global::muonsach.userControls.navigationBar navigationBar;
         
         /// <summary>
+        /// asideBar1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::muonsach.userControls.asideBar asideBar1;
+        
+        /// <summary>
         /// contentPlaceHolder control.
         /// </summary>
         /// <remarks>
@@ -56,5 +65,14 @@ namespace muonsach {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder contentPlaceHolder;
+        
+        /// <summary>
+        /// footer1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::muonsach.userControls.footer footer1;
     }
 }

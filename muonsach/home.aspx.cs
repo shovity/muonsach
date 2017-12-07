@@ -17,13 +17,13 @@ namespace muonsach
         {
             // Initial top 20 news
             DataTable newBooks = sach.top20News();
-            for (int i = 0; i < newBooks.Rows.Count; i++) newBooks.Rows[i]["ma_sach"] = i + 1;
+            for (int i = 0; i < newBooks.Rows.Count; i++) newBooks.Rows[i]["so_trang"] = i + 1;
             ListViewNews.DataSource = newBooks;
             ListViewNews.DataBind();
 
             // Initial top 20 hot
             DataTable hotBooks = sach.top20News(); // ---FIX ME
-            for (int i = 0; i < hotBooks.Rows.Count; i++) hotBooks.Rows[i]["ma_sach"] = i + 1;
+            for (int i = 0; i < hotBooks.Rows.Count; i++) hotBooks.Rows[i]["so_trang"] = i + 1;
             ListViewHot.DataSource = hotBooks;
             ListViewHot.DataBind();
         }

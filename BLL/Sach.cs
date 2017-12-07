@@ -12,5 +12,10 @@ namespace BLL
         {
             return data.getDataTable("select * from sach order by ngay_nhap desc");
         }
+
+        public DataTable getById(String id)
+        {
+            return data.getDataTable("select * from sach where ma_sach = '" + id + "'");
+        }
     }
 }

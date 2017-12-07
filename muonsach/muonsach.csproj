@@ -62,7 +62,6 @@
     <Content Include="statics\css\ajax-loader.gif" />
     <Content Include="statics\css\app.css" />
     <Content Include="statics\css\fonts\slick.svg" />
-    <Content Include="statics\css\home.css" />
     <Content Include="statics\css\slick-theme.css" />
     <Content Include="statics\css\slick.css" />
     <Content Include="statics\img\covers\3.u5465.d20171009.t095206.104725.jpg" />
@@ -86,6 +85,9 @@
     <Content Include="statics\js\app.js" />
     <Content Include="statics\js\jquery.js" />
     <Content Include="statics\js\slick.js" />
+    <Content Include="userControls\asideBar.ascx" />
+    <Content Include="userControls\bookItem.ascx" />
+    <Content Include="userControls\footer.ascx" />
     <Content Include="userControls\logo.ascx" />
     <Content Include="userControls\navigationBar.ascx" />
     <Content Include="Web.config" />
@@ -137,6 +139,27 @@
     </Compile>
     <Compile Include="bookDetail.aspx.designer.cs">
       <DependentUpon>bookDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userControls\asideBar.ascx.cs">
+      <DependentUpon>asideBar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userControls\asideBar.ascx.designer.cs">
+      <DependentUpon>asideBar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="userControls\bookItem.ascx.cs">
+      <DependentUpon>bookItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userControls\bookItem.ascx.designer.cs">
+      <DependentUpon>bookItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="userControls\footer.ascx.cs">
+      <DependentUpon>footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userControls\footer.ascx.designer.cs">
+      <DependentUpon>footer.ascx</DependentUpon>
     </Compile>
     <Compile Include="userControls\logo.ascx.cs">
       <DependentUpon>logo.ascx</DependentUpon>
