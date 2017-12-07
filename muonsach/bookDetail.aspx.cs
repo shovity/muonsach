@@ -11,11 +11,12 @@ namespace muonsach
 {
     public partial class WebForm4 : System.Web.UI.Page
     {
+        public DataRow book;
         private Sach sach = new Sach();
         protected void Page_Load(object sender, EventArgs e)
         {
             DataTable books = sach.getById(Request.QueryString.Get("id"));
-            DataRow book = books.Rows[0];
+            book = books.Rows[0];
             //Response.Write(book["ma_sach"]);
         }
     }

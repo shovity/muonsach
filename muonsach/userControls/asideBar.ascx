@@ -1,21 +1,20 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="asideBar.ascx.cs" Inherits="muonsach.userControls.asideBar" %>
 
-<span>Nổi bật 💣</span>
+<div class="al">Nổi bật</div>
 <ul>
-    <li><a href="">SÁCH ĐƯỢC MƯỢN NHIỀU NHẤT</a></li>
-    <li><a href="">SÁCH ĐƯỢC MƯỢN NHIỀU NHẤT</a></li>
-    <li><a href="">SÁCH ĐƯỢC MƯỢN NHIỀU NHẤT</a></li>
-    <li><a href="">SÁCH ĐƯỢC MƯỢN NHIỀU NHẤT</a></li>
-    <li><a href="">SÁCH ĐƯỢC MƯỢN NHIỀU NHẤT</a></li>
-    <li><a href="">SÁCH ĐƯỢC MƯỢN NHIỀU NHẤT</a></li>
+    <li><a href="">Sách văn học (5936)</a></li>
+    <li><a href="">Sách kinh tế (1547)</a></li>
+    <li><a href="">Sách thiếu nhi (10485)</a></li>
+    <li><a href="">Sách kỹ năng - Sống đẹp (1643)</a></li>
+    <li><a href="">Sách Bà mẹ - Em bé (1004)</a></li>
+    <li><a href="">Sách Học Ngoại Ngữ (2588)</a></li>
 </ul>
-<span>Yêu thích 💝</span>
+<div class="al">Yêu thích</div>
 <ul>
-    <li><a href="">SÁCH ĐƯỢC MƯỢN NHIỀU NHẤT</a></li>
-    <li><a href="">SÁCH ĐƯỢC MƯỢN NHIỀU NHẤT</a></li>
-    <li><a href="">SÁCH ĐƯỢC MƯỢN NHIỀU NHẤT</a></li>
-    <li><a href="">SÁCH ĐƯỢC MƯỢN NHIỀU NHẤT</a></li>
-    <li><a href="">SÁCH ĐƯỢC MƯỢN NHIỀU NHẤT</a></li>
-    <li><a href="">SÁCH ĐƯỢC MƯỢN NHIỀU NHẤT</a></li>
-    <li><a href="">SÁCH ĐƯỢC MƯỢN NHIỀU NHẤT</a></li>
+    <li><a href="">Sách văn học (5936)</a></li>
+    <li><a href="">Sách kinh tế (1547)</a></li>
+    <li><a href="">Sách thiếu nhi (10485)</a></li>
+    <li><a href="">Sách kỹ năng - Sống đẹp (1643)</a></li>
+    <li><a href="">Sách Bà mẹ - Em bé (1004)</a></li>
+    <li><a href="">Sách Học Ngoại Ngữ (2588)</a></li>
 </ul>

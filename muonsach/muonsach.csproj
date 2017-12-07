@@ -61,6 +61,7 @@
     <Content Include="statics\css\account.css" />
     <Content Include="statics\css\ajax-loader.gif" />
     <Content Include="statics\css\app.css" />
+    <Content Include="statics\css\bookDetail.css" />
     <Content Include="statics\css\fonts\slick.svg" />
     <Content Include="statics\css\slick-theme.css" />
     <Content Include="statics\css\slick.css" />

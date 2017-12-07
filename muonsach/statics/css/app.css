@@ -44,26 +44,6 @@ body {
     margin-left: 250px;
 }
 
-#navBar {
-    width: 100%;
-    height: 50px;
-}
-
-#navBar #navBarContent {
-    z-index: 9999;
-    background: #555;
-    width: 100%;
-    height: 50px;
-    border-bottom: 1px #4e4e4e solid;
-    border-top: 1px #4e4e4e solid;
-}
-
-#navBar.fixed #navBarContent {
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
 #asideBar {
     background: #efefef;
     width: 250px;
@@ -126,6 +106,21 @@ h3 {
     height: 100%;
 }
 
+.item .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background: #000;
+    pointer-events: none;
+}
+
+.item:hover .overlay {
+    opacity: .45;
+}
+
 .item .bookName {
     overflow: hidden;
     color: #fff;
@@ -136,7 +131,7 @@ h3 {
     line-height: 20px;
     padding: 0 10px;
     position: absolute;
-    left: 0;
+    right: -7px;
     bottom: 20px;
     clip-path: polygon(5% 100%,0 0,100% 0,100% 100%);
 }
@@ -149,24 +144,24 @@ h3 {
     line-height: 20px;
     padding: 0 10px;
     position: absolute;
-    left: 0;
+    left: -7px;
     bottom: 0;
     clip-path: polygon(0 100%,0 0,100% 0,93% 100%);
 }
 
 .item .index {
     position: absolute;
+    top: -10px;
     left: -12px;
-    top: -12px;
     width: 35px;
-    height: 35px;
-    line-height: 35px;
+    height: 25px;
+    line-height: 25px;
     text-align: center;
     overflow: hidden;
-    border-radius: 50%;
     color: #eee;
     font-size: 12px;
-    background: #FF5722;
+    background: #e73948;
+    clip-path: polygon(0 100%,0 0,100% 0,85% 80%);
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
 }
 
@@ -215,6 +210,26 @@ h3 {
 }
 
 /* NAVGATOIN BAR*/
+#navBar {
+    width: 100%;
+    height: 50px;
+}
+
+#navBar #navBarContent {
+    z-index: 9999;
+    background: #e73948;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px #ec4654 solid;
+    border-top: 1px #ec4654 solid;
+}
+
+#navBar.fixed #navBarContent {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
 #navBar ul {
     list-style: none;
     padding: 0;
@@ -226,12 +241,12 @@ h3 {
     margin-top: -1px;
     float: left;
     border: 1px transparent solid;
-    border-right: 1px #444 dotted;
+    border-right: 1px #ff838d dotted;
     height: 50px;
 }
 
 #navBar li:first-child {
-    border-left: 1px #444 dotted;
+    border-left: 1px #ff838d dotted;
 }
 
 #navBar a {
@@ -244,7 +259,7 @@ h3 {
 }
 
 #navBar li:hover {
-    background: #222;
+    background: #af2430;
 }
 
 /*FOOTER*/
@@ -291,20 +306,10 @@ h3 {
     background: rgba(0, 0, 0, 0.15);
 }
 
-#asideBar span {
+#asideBar .al {
+    font-weight: bold;
+    font-size: 16px;
     position: relative;
     display: inline-block;
-    background: #4caf50;
-    padding: 5px 20px;
-}
-
-#asideBar span:before {
-    content: "";
-    width: 0;
-    height: 0;
-    border: 16px solid transparent;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    border-left: 16px solid #4caf50;
+    margin: 10px;
 }
