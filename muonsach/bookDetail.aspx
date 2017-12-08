@@ -15,10 +15,10 @@
                     <span>Tên sách: </span><%= book["ten"] %>
                 </li>
                 <li>
-                    <span>Tác giả: </span><%= book["ma_tac_gia"] %>
+                    <span>Tác giả: </span><%= book["ten_tac_gia"] %>
                 </li>
                 <li>
-                    <span>Nhà xuất bản: </span><%= book["ma_nxb"] %>
+                    <span>Nhà xuất bản: </span><%= book["ten_nxb"] %>
                 </li>
                  <li>
                     <span>Năm xuất bản: </span><%= book["nam_xb"] %>
