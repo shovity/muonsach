@@ -7,36 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace muonsach {
+namespace muonsach.userControls {
     
     
-    public partial class WebForm1 {
+    public partial class review {
         
         /// <summary>
-        /// ListViewNews control.
+        /// mes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView ListViewNews;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea mes;
         
         /// <summary>
-        /// ListViewHot control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView ListViewHot;
+        protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// review control.
+        /// ListViewReviews control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::muonsach.userControls.review review;
+        protected global::System.Web.UI.WebControls.ListView ListViewReviews;
     }
 }

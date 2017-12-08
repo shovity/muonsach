@@ -4,90 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
+using System.Data;
 
 namespace BLL
 {
     public class BinhLuan
     {
-        private string ma;
-        private string maSach;
-        private string maNguoiDung;
-        private string binhLuanSach;
-        private string thoiGian;
+        private Data data = new Data();
 
-        public BinhLuan ()
+        public DataTable getReviews(String path)
         {
-            setThoiGianMacDinh();
+            return data.getDataTable(
+                "select * from binh_luan " +
+                "inner join nguoi_dung on binh_luan.ma_nguoi_dung = nguoi_dung.ma_nguoi_dung" +
+                " where path = '" + path + "' order by ma desc"
+            );
         }
 
-        public void setThoiGianMacDinh ()
+        public void addComment(String path, int userID, String mesg)
         {
-            thoiGian = "" + DateTime.Now.Date;
-        }
-
-        public string Ma
-        {
-            get
-            {
-                return ma;
-            }
-
-            set
-            {
-                ma = value;
-            }
-        }
-
-        public string MaSach
-        {
-            get
-            {
-                return maSach;
-            }
-
-            set
-            {
-                maSach = value;
-            }
-        }
-
-        public string MaNguoiDung
-        {
-            get
-            {
-                return maNguoiDung;
-            }
-
-            set
-            {
-                maNguoiDung = value;
-            }
-        }
-
-        public string BinhLuanSach
-        {
-            get
-            {
-                return binhLuanSach;
-            }
-
-            set
-            {
-                binhLuanSach = value;
-            }
-        }
-
-        public string ThoiGian
-        {
-            get
-            {
-                return thoiGian;
-            }
-
-            set
-            {
-                thoiGian = value;
-            }
+            data.executeNonQuery(
+                "insert into binh_luan(path, ma_nguoi_dung, binh_luan)" +
+                "values('"+path+"', "+userID+", '"+mesg+"')"
+            );
         }
     }
 }

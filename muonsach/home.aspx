@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterLayouts/layout.Master" AutoEventWireup="true" CodeBehind="home.aspx.cs" Inherits="muonsach.WebForm1" %>
 
 <%@ Register Src="~/userControls/bookItem.ascx" TagPrefix="uc1" TagName="bookItem" %>
+<%@ Register Src="~/userControls/review.ascx" TagPrefix="uc1" TagName="review" %>
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Trang Chủ</title>
@@ -25,6 +27,8 @@
             </ItemTemplate>
         </asp:ListView>
     </div>
+
+    <uc1:review runat="server" ID="review" />
 
  
 </asp:Content>

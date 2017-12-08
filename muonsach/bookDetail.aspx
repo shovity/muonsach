@@ -1,4 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterLayouts/layout.Master" AutoEventWireup="true" CodeBehind="bookDetail.aspx.cs" Inherits="muonsach.WebForm4" %>
+
+<%@ Register Src="~/userControls/review.ascx" TagPrefix="uc1" TagName="review" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Chi tiết sách</title>
     <link href="statics/css/bookDetail.css" rel="stylesheet" />
@@ -42,22 +45,7 @@
         </div>
     </div>
 
-    <div class="review">
-        <h3>Bình luận - Nhận xét</h3>
-        <textarea id="mes"></textarea>
-        <a href="" class="btn btn-send">Gửi</a>
-
-        <ul class="reviews">
-            <li>
-                <h4>Name</h4>
-                <p class="mes">sdfsdfsd</p>
-            </li>
-            <li>
-                <h4>Name</h4>
-                <p class="mes">sdfsdfsd</p>
-            </li>
-        </ul>
-    </div>
+    <uc1:review runat="server" id="review" />
 
     
 </asp:Content>

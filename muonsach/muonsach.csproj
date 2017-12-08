@@ -91,6 +91,7 @@
     <Content Include="userControls\footer.ascx" />
     <Content Include="userControls\logo.ascx" />
     <Content Include="userControls\navigationBar.ascx" />
+    <Content Include="userControls\review.ascx" />
     <Content Include="Web.config" />
     <Content Include="login.aspx" />
     <Content Include="register.aspx" />
@@ -175,6 +176,13 @@
     </Compile>
     <Compile Include="userControls\navigationBar.ascx.designer.cs">
       <DependentUpon>navigationBar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="userControls\review.ascx.cs">
+      <DependentUpon>review.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userControls\review.ascx.designer.cs">
+      <DependentUpon>review.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
