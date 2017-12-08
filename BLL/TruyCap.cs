@@ -3,108 +3,90 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAL;
+using System.Data;
 
 namespace BLL
 {
-    class TruyCap
+    public class TruyCap
     {
-        private string trang;
-        private int tong;
-        private int ngay;
-        private int tuan;
-        private int thang;
-        private int nam;
-        private int hienTai;
+        Data data = new Data();
+        DataTable dataTable = new DataTable();
 
-        public string Trang
+        public int[] path (string trang)
         {
-            get
-            {
-                return trang;
-            }
+            string cmd = "select * from truy_cap where trang = N'" + trang + "'";
+            dataTable = data.getDataTable(cmd);
+            //tra ve so truy cap tong, ngay, thang, nam.
+            int[] value = { Int32.Parse(dataTable.Rows[0][1].ToString()),
+                Int32.Parse(dataTable.Rows[0][2].ToString()),
+                Int32.Parse(dataTable.Rows[0][3].ToString()),
+                Int32.Parse(dataTable.Rows[0][4].ToString()),
+                Int32.Parse(dataTable.Rows[0][5].ToString()) };
+            return value;
+        }
 
-            set
+        public string getNgayHienTai(string trang)
+        {
+            string cmd = "select hien_tai from truy_cap where trang = N'" + trang + "'";
+            dataTable = data.getDataTable(cmd);
+            return dataTable.Rows[0][0].ToString();
+        }
+
+        public void saveToDatabase(string path, string ngayTuanThangNamTong)
+        {
+            dataTable = data.getDataTable("select * from truy_cap");
+            int flag = 0;
+            string[] truycap = ngayTuanThangNamTong.Split('/');
+            string date = DateTime.Now.Year.ToString() + "/" + DateTime.Now.Month.ToString() +
+                "/" + DateTime.Now.Day.ToString();
+
+            foreach (DataRow row in dataTable.Rows)
             {
-                trang = value;
+                if (row[0].ToString().Equals(path))
+                {
+                    flag = 1;
+                }
+            }
+            if (flag == 0)
+            {
+                string cmd = "insert into truy_cap values(N'" + path + "', " + truycap[4] + ", " +
+                    truycap[0] + ", " + truycap[1] + ", " + truycap[2] + ", " + truycap[3] +
+                    ", '" + date + "')";
+                data.executeNonQuery(cmd);
+            } else
+            {
+                string cmd = "update truy_cap set tong = " + truycap[4] + ", ngay = " + truycap[0] +
+                    ", tuan = " + truycap[1] + ", thang = " + truycap[2] + ", nam = " +
+                    truycap[3] + ", hien_tai = '" + date + "' where trang = N'" + path + "'";
+                data.executeNonQuery(cmd);
             }
         }
 
-        public int Tong
+        public int truyCapNgay()
         {
-            get
-            {
-                return tong;
-            }
+            string command = "select * from truy_cap";
+            dataTable = data.getDataTable(command);
 
-            set
-            {
-                tong = value;
-            }
+            return Int32.Parse(dataTable.Rows[0][2].ToString());
         }
 
-        public int Ngay
+        public int truyCapThang()
         {
-            get
-            {
-                return ngay;
-            }
-
-            set
-            {
-                ngay = value;
-            }
+            dataTable = data.getDataTable("select * from truy_cap");
+            return Int32.Parse(dataTable.Rows[0][3].ToString());
         }
 
-        public int Tuan
+        public int truyCapNam()
         {
-            get
-            {
-                return tuan;
-            }
-
-            set
-            {
-                tuan = value;
-            }
+            dataTable = data.getDataTable("select * from truy_cap");
+            return Int32.Parse(dataTable.Rows[0][4].ToString());
         }
 
-        public int Thang
+        public int truyCapTong()
         {
-            get
-            {
-                return thang;
-            }
-
-            set
-            {
-                thang = value;
-            }
-        }
-
-        public int Nam
-        {
-            get
-            {
-                return nam;
-            }
-
-            set
-            {
-                nam = value;
-            }
-        }
-
-        public int HienTai
-        {
-            get
-            {
-                return hienTai;
-            }
-
-            set
-            {
-                hienTai = value;
-            }
+            dataTable = data.getDataTable("select * from truy_cap");
+            return Int32.Parse(dataTable.Rows[0][1].ToString());
         }
     }
 }
