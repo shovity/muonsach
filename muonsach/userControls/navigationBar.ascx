@@ -7,4 +7,26 @@
         <li><a href="">THÔNG TIN</a></li>
         <li><a href="">QUẢN TRỊ</a></li>
     </ul>
+
+    <div class="userBox">
+
+        <%if (Session["username"] != null)
+          {
+              %>
+            
+            <div class="username" runat="server" id="username"></div> / 
+            <asp:Button CssClass="btn-logout" ID="ButtonLogout" runat="server" Text="Đăng xuất" OnClick="ButtonLogout_Click" />
+                    
+        <%
+          }
+          else { 
+          %>
+        <a href="/login.aspx">Đăng nhập</a> / <a href="/register.aspx">Đăng ký</a>
+        <%
+          }%>
+
+
+        
+
+    </div>
 </div>

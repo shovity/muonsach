@@ -3,66 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAL;
+using System.Data;
 
 namespace BLL
 {
-    class NguoiDung
+    public class NguoiDung
     {
-        private string maNguoiDung;
-        private string tenDangNhap;
-        private string matKhau;
-        private string maNhanDang;
+        private Data data = new Data();
 
-        public string MaNguoiDung
-        {
-            get
-            {
-                return maNguoiDung;
-            }
-
-            set
-            {
-                maNguoiDung = value;
-            }
+        public Boolean isNotExist(String username)
+        { 
+            DataTable users = data.getDataTable(
+                "select * from nguoi_dung where ten_dang_nhap = '"+username+"'"
+            );
+            return users.Rows.Count == 0;
         }
 
-        public string TenDangNhap
+        public void addUser(String username, String password)
         {
-            get
-            {
-                return tenDangNhap;
-            }
-
-            set
-            {
-                tenDangNhap = value;
-            }
+            data.executeNonQuery(
+                "insert into nguoi_dung(ten_dang_nhap, mat_khau) " +
+                "values('"+username+"', '"+password+"')"
+            );
         }
 
-        public string MatKhau
+        public Boolean auth(String username, String password)
         {
-            get
-            {
-                return matKhau;
-            }
-
-            set
-            {
-                matKhau = value;
-            }
-        }
-
-        public string MaNhanDang
-        {
-            get
-            {
-                return maNhanDang;
-            }
-
-            set
-            {
-                maNhanDang = value;
-            }
+            DataTable users = data.getDataTable(
+                "select * from nguoi_dung " +
+                "where ten_dang_nhap = '" + username + "' and mat_khau = '"+password+"'"
+            );
+            return users.Rows.Count != 0;
         }
     }
 }

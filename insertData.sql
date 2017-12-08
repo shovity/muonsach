@@ -19,3 +19,6 @@ values(
 	'6/12/2017'
 )
 
+-- insert user
+insert into nguoi_dung(ten_dang_nhap, mat_khau) values('master', 'retsam')
+
