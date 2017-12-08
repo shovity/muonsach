@@ -13,6 +13,7 @@ namespace muonsach.userControls
     {
         private BinhLuan bl = new BinhLuan();
         private String path = "";
+        private NguoiDung user = new NguoiDung();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,7 +22,12 @@ namespace muonsach.userControls
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            bl.addComment(path, 1, mes.Value);
+            int id = 2;
+            if (Session["username"] != null)
+            {
+                id = user.getIdByUsername(Session["username"].ToString());
+            }
+            bl.addComment(path, id, mes.Value);
             mes.Value = "";
             loadReviews();
         }

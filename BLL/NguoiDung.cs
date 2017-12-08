@@ -36,5 +36,12 @@ namespace BLL
             );
             return users.Rows.Count != 0;
         }
+
+        public int getIdByUsername(String username)
+        {
+            return Int32.Parse(data.getDataTable(
+                "select * from nguoi_dung where ten_dang_nhap = '" + username + "'"
+            ).Rows[0]["ma_nguoi_dung"].ToString());
+        }
     }
 }

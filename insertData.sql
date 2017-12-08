@@ -20,5 +20,7 @@ values(
 )
 
 -- insert user
+dbcc checkident (nguoi_dung, reseed, 0)
 insert into nguoi_dung(ten_dang_nhap, mat_khau) values('master', 'retsam')
+insert into nguoi_dung(ten_dang_nhap, mat_khau) values('guest', '123456')
 
