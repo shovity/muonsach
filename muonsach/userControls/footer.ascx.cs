@@ -21,6 +21,7 @@ namespace muonsach.userControls
         private void showTruyCap()
         {
             string path = Request.Url.AbsolutePath;
+            truyCap.increatTruyCap(path);
             int[] truycap = truyCap.path(path);
             labelTruycap.Text = "Tổng số truy cập: " + truycap[0] + 
                 "; Số truy cập trong ngày: " + truycap[1] + "; Số truy cập trong tuần: " +

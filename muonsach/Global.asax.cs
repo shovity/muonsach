@@ -83,8 +83,8 @@ namespace muonsach
             Application.Contents["truyCapNgayTuanThangNamTong"] = truycap[0] + "/" + truycap[1] +
                 "/" + truycap[2] + "/" + truycap[3] + "/" + truycap[4];
 
-            truyCap.saveToDatabase(path, truycap[0] + "/" + truycap[1] + "/" + truycap[2] +
-                "/" + truycap[3] + "/" + truycap[4]);
+            //truyCap.saveToDatabase(path, truycap[0] + "/" + truycap[1] + "/" + truycap[2] +
+            //    "/" + truycap[3] + "/" + truycap[4]);
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)

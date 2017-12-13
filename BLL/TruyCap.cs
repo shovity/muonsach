@@ -17,6 +17,7 @@ namespace BLL
         {
             string cmd = "select * from truy_cap where trang = N'" + trang + "'";
             dataTable = data.getDataTable(cmd);
+
             //tra ve so truy cap tong, ngay, thang, nam.
             int[] value = { Int32.Parse(dataTable.Rows[0][1].ToString()),
                 Int32.Parse(dataTable.Rows[0][2].ToString()),
@@ -24,6 +25,47 @@ namespace BLL
                 Int32.Parse(dataTable.Rows[0][4].ToString()),
                 Int32.Parse(dataTable.Rows[0][5].ToString()) };
             return value;
+        }
+
+        public void increatTruyCap(string trang)
+        {
+            string cmd = "select * from truy_cap where trang = N'" + trang + "'";
+            dataTable = data.getDataTable(cmd);
+            DateTime date = DateTime.Parse(dataTable.Rows[0][6].ToString());
+            
+            //kiem tra tuan moi
+            if (date.DayOfWeek.ToString().Equals(DayOfWeek.Sunday.ToString()) && 
+                DateTime.Now.DayOfWeek.ToString().Equals(DayOfWeek.Monday.ToString()))
+            {
+                dataTable.Rows[0][3] = 0;
+            }
+
+            //kiem tra ngay thang nam moi
+            if(!date.Year.ToString().Equals(DateTime.Now.Year.ToString()))
+            {
+                dataTable.Rows[0][2] = 0;
+                dataTable.Rows[0][4] = 0;
+                dataTable.Rows[0][5] = 0;
+            } else if(!date.Month.ToString().Equals(DateTime.Now.Month.ToString()))
+            {
+                dataTable.Rows[0][2] = 0;
+                dataTable.Rows[0][4] = 0;
+            } else if (!date.Day.ToString().Equals(DateTime.Now.Day.ToString()))
+            {
+                dataTable.Rows[0][2] = 0;
+            }
+
+            dataTable.Rows[0][1] = Int32.Parse(dataTable.Rows[0][1].ToString()) + 1;
+            dataTable.Rows[0][2] = Int32.Parse(dataTable.Rows[0][2].ToString()) + 1;
+            dataTable.Rows[0][3] = Int32.Parse(dataTable.Rows[0][3].ToString()) + 1;
+            dataTable.Rows[0][4] = Int32.Parse(dataTable.Rows[0][4].ToString()) + 1;
+            dataTable.Rows[0][5] = Int32.Parse(dataTable.Rows[0][5].ToString()) + 1;
+
+            saveToDatabase(trang, dataTable.Rows[0][2].ToString() + "/" +
+                dataTable.Rows[0][3].ToString() + "/" +
+                dataTable.Rows[0][4].ToString() + "/" +
+                dataTable.Rows[0][5].ToString() + "/" +
+                dataTable.Rows[0][1].ToString());
         }
 
         public string getNgayHienTai(string trang)
