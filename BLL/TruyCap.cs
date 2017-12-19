@@ -29,6 +29,7 @@ namespace BLL
 
         public void increatTruyCap(string trang)
         {
+            checkExist(trang);
             string cmd = "select * from truy_cap where trang = N'" + trang + "'";
             dataTable = data.getDataTable(cmd);
             DateTime date = DateTime.Parse(dataTable.Rows[0][6].ToString());
@@ -75,6 +76,19 @@ namespace BLL
             return dataTable.Rows[0][0].ToString();
         }
 
+        public void checkExist(string trang)
+        {
+            string date = DateTime.Now.Year.ToString() + "/" + DateTime.Now.Month.ToString() +
+                "/" + DateTime.Now.Day.ToString();
+            dataTable = data.getDataTable("select * from truy_cap where trang = N'" + trang + "'");
+            
+            if (dataTable.Rows.Count == 0)
+            {
+                string cmd = "insert into truy_cap values(N'" + trang + "', 0, 0, 0, 0, 0, '" + date + "')";
+                data.executeNonQuery(cmd);
+            }
+        }
+
         public void saveToDatabase(string path, string ngayTuanThangNamTong)
         {
             dataTable = data.getDataTable("select * from truy_cap");
@@ -82,27 +96,12 @@ namespace BLL
             string[] truycap = ngayTuanThangNamTong.Split('/');
             string date = DateTime.Now.Year.ToString() + "/" + DateTime.Now.Month.ToString() +
                 "/" + DateTime.Now.Day.ToString();
-
-            foreach (DataRow row in dataTable.Rows)
-            {
-                if (row[0].ToString().Equals(path))
-                {
-                    flag = 1;
-                }
-            }
-            if (flag == 0)
-            {
-                string cmd = "insert into truy_cap values(N'" + path + "', " + truycap[4] + ", " +
-                    truycap[0] + ", " + truycap[1] + ", " + truycap[2] + ", " + truycap[3] +
-                    ", '" + date + "')";
-                data.executeNonQuery(cmd);
-            } else
-            {
-                string cmd = "update truy_cap set tong = " + truycap[4] + ", ngay = " + truycap[0] +
-                    ", tuan = " + truycap[1] + ", thang = " + truycap[2] + ", nam = " +
-                    truycap[3] + ", hien_tai = '" + date + "' where trang = N'" + path + "'";
-                data.executeNonQuery(cmd);
-            }
+            
+            string cmd = "update truy_cap set tong = " + truycap[4] + ", ngay = " + truycap[0] +
+                ", tuan = " + truycap[1] + ", thang = " + truycap[2] + ", nam = " +
+                truycap[3] + ", hien_tai = '" + date + "' where trang = N'" + path + "'";
+            data.executeNonQuery(cmd);
+            
         }
 
         public int truyCapNgay()

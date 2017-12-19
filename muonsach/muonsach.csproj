@@ -58,6 +58,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="addnew.aspx" />
+    <Content Include="administrator.aspx" />
+    <Content Include="edit.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="statics\css\account.css" />
@@ -88,6 +91,7 @@
     <Content Include="statics\js\app.js" />
     <Content Include="statics\js\jquery.js" />
     <Content Include="statics\js\slick.js" />
+    <Content Include="types.aspx" />
     <Content Include="userControls\asideBar.ascx" />
     <Content Include="userControls\bookItem.ascx" />
     <Content Include="userControls\footer.ascx" />
@@ -101,6 +105,27 @@
     <Content Include="bookDetail.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addnew.aspx.cs">
+      <DependentUpon>addnew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addnew.aspx.designer.cs">
+      <DependentUpon>addnew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="administrator.aspx.cs">
+      <DependentUpon>administrator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="administrator.aspx.designer.cs">
+      <DependentUpon>administrator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -146,6 +171,13 @@
     </Compile>
     <Compile Include="bookDetail.aspx.designer.cs">
       <DependentUpon>bookDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="types.aspx.cs">
+      <DependentUpon>types.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="types.aspx.designer.cs">
+      <DependentUpon>types.aspx</DependentUpon>
     </Compile>
     <Compile Include="userControls\asideBar.ascx.cs">
       <DependentUpon>asideBar.ascx</DependentUpon>

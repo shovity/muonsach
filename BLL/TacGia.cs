@@ -3,38 +3,41 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using DAL;
 
 namespace BLL
 {
-    class TacGia
+    public class TacGia
     {
-        private string maTacGia;
-        private string tenTacGia;
+        private Data data = new Data();
 
-        public string MaTacGia
+        public void checkExist(string tentacgia)
         {
-            get
-            {
-                return maTacGia;
-            }
+            DataTable dataTable = data.getDataTable(
+                "select * from tac_gia where " +
+                "ten_tac_gia = N'" + tentacgia + "'"
+                );
 
-            set
+            if (dataTable.Rows.Count == 0)
             {
-                maTacGia = value;
+                insertNew(tentacgia);
             }
         }
 
-        public string TenTacGia
+        public void insertNew(string tentacgia)
         {
-            get
-            {
-                return tenTacGia;
-            }
+            data.executeNonQuery(
+                "insert into tac_gia(ten_tac_gia) values('" + tentacgia + "')"
+                );
+        }
 
-            set
-            {
-                tenTacGia = value;
-            }
+        public DataTable getByName(string tentacgia)
+        {
+            return data.getDataTable(
+                "select * from tac_gia where " +
+                "ten_tac_gia = N'" + tentacgia + "'"
+                );
         }
     }
 }

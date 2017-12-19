@@ -3,38 +3,41 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using DAL;
 
 namespace BLL
 {
-    class NXB
+    public class NXB
     {
-        private string maNxb;
-        private string tenNxb;
+        private Data data = new Data();
 
-        public string MaNxb
+        public void checkNXB(string tennxb)
         {
-            get
-            {
-                return maNxb;
-            }
+            DataTable dataTable = data.getDataTable(
+                "select * from nxb where " +
+                "ten_nxb = N'" + tennxb + "'"
+                );
 
-            set
+            if (dataTable.Rows.Count == 0)
             {
-                maNxb = value;
+                insertNew(tennxb);
             }
         }
 
-        public string TenNxb
+        public void insertNew(string tennxb)
         {
-            get
-            {
-                return tenNxb;
-            }
+            data.executeNonQuery(
+                "insert into nxb(ten_nxb) values('" + tennxb + "')"
+                );
+        }
 
-            set
-            {
-                tenNxb = value;
-            }
+        public DataTable getByName(string tennxb)
+        {
+            return data.getDataTable(
+                "select * from nxb where " +
+                "ten_nxb = N'" + tennxb + "'"
+                );
         }
     }
 }

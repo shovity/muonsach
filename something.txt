@@ -1,0 +1,24 @@
+[
+	{
+		"ten_dang_nhap": "master",
+		"mat_khau": "retsam"
+	},
+	{
+		"ten_dang_nhap": "guest",
+		"mat_khau": "123456"
+	}
+]
+[
+	{
+		"ten_dang_nhap": "tung",
+		"mat_khau": "mai"
+	},
+	{
+		"ten_dang_nhap": "huong",
+		"mat_khau": "nguyen"
+	},
+	{
+		"ten_dang_nhap": "nhan",
+		"mat_khau": "nguyen"
+	}
+]

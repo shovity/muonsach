@@ -5,7 +5,7 @@
         <li><a href="">YÊU THÍCH</a></li>
         <li><a href="">TÀI KHOẢN</a></li>
         <li><a href="">THÔNG TIN</a></li>
-        <li><a href="">QUẢN TRỊ</a></li>
+        <li><a href="/administrator.aspx">QUẢN TRỊ</a></li>
     </ul>
 
     <div class="userBox">
