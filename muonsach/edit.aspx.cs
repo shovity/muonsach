@@ -41,6 +41,7 @@ namespace muonsach
         public void loadInfo(string masach)
         {
             DataTable dataTable = sach.getById(masach);
+
             textBoxTen.Text = dataTable.Rows[0]["ten"].ToString();
             imageAnh.ImageUrl = "/statics/img/covers/" + dataTable.Rows[0]["anh"].ToString();
             textBoxTacGia.Text = dataTable.Rows[0]["ten_tac_gia"].ToString();

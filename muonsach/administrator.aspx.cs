@@ -12,9 +12,30 @@ namespace muonsach
     public partial class administrator : System.Web.UI.Page
     {
         private Sach sach = new Sach();
+        private NguoiDung nguoiDung = new NguoiDung();
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(Session["username"] != null)
+            {
+                if(nguoiDung.getIdByUsername(Session["username"].ToString()) != 1)
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "redirect",
+                        "alert('You dont have permission to enter!'); window.location='" +
+                        Request.ApplicationPath + "home.aspx';", true);
+                    //Response.Write("<script> alert('You dont have permission to enter!'); " + 
+                    //    "window.location.href('/home.aspx')</script>");
+                    //Response.Redirect("/home.aspx");
+                }
+            } else
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "redirect",
+                    "alert('you must login to enter!'); window.location='" +
+                    Request.ApplicationPath + "login.aspx';", true);
+                //Response.Write("<script> alert('you must login to enter!'); " +
+                //    "window.location.href('/home.aspx')</script>");
+                //Response.Redirect("/login.aspx");
+            }
             if (!IsPostBack)
             {
                 setGridView();

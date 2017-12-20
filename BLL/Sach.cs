@@ -107,16 +107,16 @@ namespace BLL
                 "insert into sach(ma_sach, ten, anh, ma_tac_gia, ma_nxb, so_trang, gia, gia_thue, loai, " +
                 "mo_ta, nam_xb, ngay_nhap) " + 
                 "values(" + 
-                "'" + masach + "', " +
-                "'" + ten + "', " +
-                "'" + anh + "', " +
+                "N'" + masach + "', " +
+                "N'" + ten + "', " +
+                "N'" + anh + "', " +
                 matacgia + ", " +
                 manxb + ", " +
                 sotrang + ", " +
                 gia + ", " + 
                 giathue + ", " +
-                "'" + loai + "', " +
-                "'" + mota + "', " +
+                "N'" + loai + "', " +
+                "N'" + mota + "', " +
                 "'" + namxb + "/01/01', " +
                 "'" + ngaynhap + "'" + 
                 ")"
